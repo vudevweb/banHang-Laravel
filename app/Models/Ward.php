@@ -14,4 +14,6 @@ class Ward extends Model
     ];
 
     protected $table = 'wards';
+
+    
 }

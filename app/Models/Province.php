@@ -15,4 +15,11 @@ class Province extends Model
 
     protected $table = 'provinces';
 
+
+    public function districts()
+    {
+        return $this->hasMany(District::class, 'province_code', 'code');
+    }
+
 }
+

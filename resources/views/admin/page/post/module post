@@ -1,0 +1,44 @@
+module post :
+    - post_catagory : lưu các danh mục bài viết
+    - posts : lưu các bài viết
+    - post_category_post : lưu các bài viết thuộc danh mục nào
+    -
+
+n-n
+    - post_catagory:
+        + id
+        + title
+        + slug
+        + description
+        + meta_title (SEO)
+        + meta_description (SEO)
+        + meta_keyword (SEO)
+        + detele_at (xóa mềm)
+        + publish (trạng thái hiển thị)
+        + order (thứ tự hiển thị)
+        + user_id (người tạo danh mục)
+
+    - posts:
+        + id
+        + title
+        + slug
+        + description
+        + thumbnail (hình ảnh đại diện)
+        + meta_title (SEO)
+        + meta_description (SEO)
+        + meta_keyword (SEO)
+        + publish (trạng thái hiển thị)
+        + order (thứ tự hiển thị)
+        + user_id (người tạo bài viết)
+        + post_category_id (danh mục của bài viết)
+        + view (số lượt xem)
+        + detele_at (xóa mềm)
+        + created_at (ngày tạo bài viết)
+
+    - post_category_post:
+        + post_id
+        + post_category_id
+        + post_id
+        + order (thứ tự hiển thị)
+        + created_at (ngày tạo)
+        + updated_at (ngày cập nhật)
